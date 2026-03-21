@@ -1,0 +1,21 @@
+# 默认忽略的文件
+/shelf/
+/workspace.xml
+# 基于编辑器的 HTTP 客户端请求
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# 忽略你的超大PDF
+Java 2实用教程  第5版_14257003.pdf
+
+# 忽略所有exe安装包、压缩包
+*.exe
+*.pdf
+*.zip
+*.rar
+*.7z
+
+# 忽略安装包文件夹
+sky/material/day06/安装包/
