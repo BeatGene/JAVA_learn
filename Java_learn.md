@@ -234,7 +234,7 @@ static修饰abstract方法，所以abstract方法必须是实例方法
 
 3.abstract类的子类
 
-如果一个非抽象类时某个抽象类的子类，那么它必须重写父类的抽象方法；如果子类是抽象类，可以重写，也可以继承
+如果一个非抽象类是某个抽象类的子类，那么它必须重写父类的抽象方法；如果子类是抽象类，可以重写，也可以继承
 
 4.abstract类的对象作为上转型对象
 可以使用abstract类声明对象，作为子类对象的上转型对象
@@ -265,3 +265,111 @@ static修饰abstract方法，所以abstract方法必须是实例方法
 如果一个非抽象类实现了某个接口，那么这个类必须重写这个接口中所有的方法
 
 如果一个类声明实现了一个接口，但没有重写接口中所有的方法，那么这个类必须是抽象类
+
+程序可以用接口名访问接口中的常量，但是如果一个类实现了接口，那么该类可以直接在类体中使用该接口中的常量
+
+## 6.3 接口的UML图
+
+## 6.4 接口回调
+在Java语言中，接口回调是指；可以把实现某一接口的类创建的对象的引用赋值给该接口声明的接口变量，那么该接口变量就可以调用
+被类实现的接口方法。实际上，当接口变量调用被类实现的接口方法时，就是通知相应的对象调用这个方法
+
+## 6.5 理解接口
+1.接口可以抽象出重要的行为标准，该行为标准用抽象方法来表示
+
+2.可以把实现接口的类的对象的引用赋值给接口变量，该接口变量可以调用被该类实现的接口方法，即体现该类根据接口里的行为标准
+给出的具体行为
+
+## 6.6 接口与多态
+由接口产生的多态就是指不同的类在实现同一个接口时可能具有不同的实现方式，那么接口变量在回调接口方法时就可能具有多种形态
+
+## 6.7 接口参数
+如果一个方法的参数是接口类型，我们就可以将任何实现该接口的类的实例的引用传递给该接口参数，那么接口参数就可以回调类实现的接口方法
+
+## 6.8 abstract类与接口的比较
+1.abstract类和接口都可以有abstract方法
+
+2.接口中只可以有常量，不能有变量；而abstract类中既可以有常量，也可以有变量。
+
+3.abstract类中也可以有非abstract方法，接口不可以
+
+## 6.9 面向接口编程
+
+# 第七章 内部类与异常类
+
+## 7.1 内部类
+Java支持在一个类中定义另一个类，这样的类称作内部类，而包含内部类的类称为内部类的外嵌类
+
+## 7.2 匿名类
+假如没有显式地声明一个类的子类，而又想用子类创建一个对象，那么该如何实现这一目的呢？Java允许我们直接使用
+一个类的子类的类体创建一个子类对象，也就是说，创建子类对象时，除了使用父类的构造方法外还有类体
+
+## 7.3 异常类
+Java允许定义方法时声明该方法调用过程中可能出现的异常，即允许方法调用过程中抛出异常对象，终止当前方法的继续执行
+
+Java使用try-catch语句来处理异常，将可能出现的异常操作放在try-catch语句的try部分，发生异常后处理放在catch
+
+在编写程序时可以扩展Exception类定义自己的异常类，然后根据程序的需要来规定哪些方法产生这样的异常。一个方法在声明时
+可以使用throws关键字声明要产生的若干个异常，并在该方法的方法体中具体给出产生异常的操作
+
+## 7.4 断言
+断言语句在调试代码阶段非常有用，断言语句一般用于程序不准备通过捕获异常来处理的错误。
+
+assert number>=0
+
+# 第八章 常用实用类
+
+## 8.1 String类
+String对象 字符串对象
+
+String s=new String(“we are students”);
+
+System.out.println(s);输出的是对象的实体，即字符序列
+
+String tom=new String(s);/ char a[]={‘J’，‘A’,'V','A'}:  String s=new string(a);
+
+### String类的常用方法
+public int length()
+
+public boolean equals(String s)
+
+public boolean startsWith(String s)   public boolean endsWith(String s)
+
+public int compareTo(String s)
+
+public boolean contains(String s)
+
+public int indexOf(String s)   public int lastIndexOf(String s)
+
+public String substring(int startpoint)
+
+public String trim()
+
+## 8.2 StringTokenizer类
+
+## 8.3 Scanner类
+
+## 8.4 StringBuffer类
+String对象的字符序列是不可修改的。StringBuffer类的对象的实体的内存空间可以自动地改变大小
+
+StringBuffer s=new StringBuffer("我喜欢");
+
+s.append("玩篮球");
+
+1.append方法
+
+2.StringBuffer insert(int index,String str)
+
+## 8.5 Data类与Calendar类
+
+## 8.6 日期的格式化
+
+## 8.7 Math类 BigInteger类 Random类
+
+## 8.8 数字格式化
+
+## 8.9 Class类与Console类
+
+## 8.10 Pattern类与Matcher类
+
+# 第九章 组件及事件处理
